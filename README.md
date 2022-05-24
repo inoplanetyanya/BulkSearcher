@@ -2,7 +2,7 @@
 
 ## Download
 
-[Download link win32x64](https://)
+[Download link win32x64](https://github.com/inoplanetyanya/BulkSearcher/releases/download/v1.0.0/BulkSearcher_v1.0.0.exe)
 
 ## About
 
