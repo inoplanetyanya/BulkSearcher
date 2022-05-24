@@ -1,0 +1,11 @@
+<div class="inputs-group-container">
+  <p class="title">{{ this.inputGroup.title }}:</p>
+  <div class="inputs-container">
+    <input
+      class="input"
+      type="text"
+      *ngFor="let placeholder of this.inputGroup.placeholders; let idx = index"
+      [placeholder]="placeholder"
+    />
+  </div>
+</div>

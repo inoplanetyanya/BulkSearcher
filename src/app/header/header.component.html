@@ -1,0 +1,47 @@
+<div class="header-container">
+  <div class="title-container header-element">
+    <p class="title-text">Bulk Searcher</p>
+  </div>
+  <div class="league header-element">
+    <select name="league-select" (change)="changeLeague($event)">
+      <option *ngFor="let league of leagueServise.leagues" value="{{ league }}" (selected)="league === leagueServise.selectedLeague">
+        {{ league }}
+      </option>
+    </select>
+  </div>
+  <div class="type-container header-element">
+    <app-radioButtons
+      [buttons]="buttons"
+      [groupName]="'blight'"
+      (onRadioValueChange)="this.optionsService.options.blightType = $event"
+    ></app-radioButtons>
+  </div>
+  <div class="tier-container header-element">
+    <app-minMax
+      [title]="'Tier'"
+      [min]="optionsService.options.tierMin"
+      [max]="optionsService.options.tierMax"
+      (onMinChange)="optionsService.options.tierMin = $event"
+      (onMaxChange)="optionsService.options.tierMax = $event"
+    ></app-minMax>
+  </div>
+  <div class="price-container header-element">
+    <app-minMax
+      [title]="'Price per map'"
+      [min]="optionsService.options.priceMin"
+      [max]="optionsService.options.priceMax"
+      (onMinChange)="optionsService.options.priceMin = $event"
+      (onMaxChange)="optionsService.options.priceMax = $event"
+    ></app-minMax>
+  </div>
+  <div class="min-stock header-element">
+    <app-singleInput
+      [title]="'Min stock'"
+      [placeholder]="'Min'"
+      (onInputChange)="this.optionsService.options.stockMin = $event"
+    ></app-singleInput>
+  </div>
+  <div class="search-button header-element">
+    <app-search-button [text]="'Search'"></app-search-button>
+  </div>
+</div>

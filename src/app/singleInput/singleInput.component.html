@@ -1,0 +1,15 @@
+<div class="single-input-container">
+  <p class="title">{{ this.title }}:</p>
+  <div class="input-container">
+    <input
+      class="input"
+      type="text"
+      name="title-input"
+      id=""
+      maxlength="6"
+      placeholder="{{ this.placeholder }}"
+      (input)="this.onInput()"
+      [(ngModel)]="this.inputValue"
+    />
+  </div>
+</div>

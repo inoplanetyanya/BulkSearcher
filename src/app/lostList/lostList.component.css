@@ -1,0 +1,153 @@
+.workspace-container {
+  background-color: #0e0e0e;
+  min-height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /* max-width: 100vw; */
+  /* min-width: 1464px; */
+}
+
+.lot {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  -webkit-user-select: none;
+  background-color: #1e1e1e;
+  margin: 10px auto;
+  border-radius: 6px;
+  /* border: 1px solid rgba(144, 32, 32, 0.5); */
+}
+
+p {
+  color: #ffffff;
+  margin: 10px;
+}
+
+.seller-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.maps-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.buy-message {
+  margin: 10px;
+  color: #ffffff;
+  border: 1px solid #902020;
+  background-color: #151515;
+  border-radius: 6px;
+  padding: 10px;
+  /* max-width: 1400px; */
+  /* max-height: 100px; */
+  height: 100px;
+  resize: none;
+}
+
+.buy-message::-webkit-scrollbar {
+  display: none;
+}
+
+.buy-message:focus {
+  outline: none;
+}
+
+.copy-message-button {
+  margin: 10px;
+  width: 186px;
+  height: 34px;
+  color: #ffffff;
+  border: 1px solid #902020;
+  background-color: #151515;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.copy-message-button:hover {
+  cursor: pointer;
+}
+
+.clicked {
+  /* color: #902020; */
+  background-color: #902020;
+}
+
+.cb-map {
+  position: relative;
+  top: -2px;
+  margin: 0 10px;
+}
+
+.cb-map::after {
+  height: 18px;
+  width: 18px;
+  border-radius: 9px;
+  background-color: #1e1e1e;
+  content: "";
+  border: 2px solid rgb(138, 32, 32);
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  left: -3px;
+  top: -2px;
+}
+
+.cb-map:checked::after {
+  height: 18px;
+  width: 18px;
+  border-radius: 9px;
+  background-color: rgb(138, 32, 32);
+  content: "";
+  border: 2px solid #1e1e1e;
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+.pm-buttons {
+}
+
+.left {
+  width: 400px;
+}
+
+.right > button {
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  border: 2px solid rgb(138, 32, 32);
+  background-color: #151515;
+  color: #fff;
+  border-radius: 9px;
+}
+
+.btnm {
+  margin: 0 5px 0 10px;
+}
+
+.btnp {
+  margin: 0 10px 0 5px;
+}
+
+.lottt {
+  color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.dashed {
+  text-decoration: line-through;
+  color:#902020;
+}

@@ -1,0 +1,21 @@
+.button-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  /* margin: 0 20px; */
+}
+
+.button {
+  color: #ffffff;
+  width: 93px;
+  height: 34px;
+  background-color: #0e0e0e;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 0 2px #ffffff;
+}
+
+.button:hover {
+  box-shadow: 0 0 4px #ffffff;
+  cursor: pointer;
+}

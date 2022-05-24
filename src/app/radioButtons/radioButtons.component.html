@@ -1,0 +1,18 @@
+<div class="radio-buttons-container">
+  <div class="radio-group">
+    <div
+      class="radio-group-item"
+      *ngFor="let button of this.buttons; let idx = index"
+    >
+      <input
+        id="{{ button.value }}-radio"
+        type="radio"
+        name="{{ this.groupName }}-radio"
+        value="{{ button.value }}"
+        [checked]="this.optionsService.options.blightType === button.value"
+        (click)="this.onRadioClick(button.value)"
+      />
+      <label for="{{ button.value }}-radio">{{ button.text }}</label>
+    </div>
+  </div>
+</div>

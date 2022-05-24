@@ -1,0 +1,41 @@
+<div class="workspace-container">
+  <div
+    class="lot"
+    *ngFor="let lot of this.requestService.lastResult; let idx = index"
+  >
+    <div class="seller-container">
+      <p class="seller">Seller:</p>
+      <p class="seller-name">{{ lot.seller }} ({{ lot.sellerAcc }})</p>
+    </div>
+    <div class="maps-container">
+      <p class="maps">Maps:</p>
+      <div class="map-list">
+        <div class="lottt" *ngFor="let map of lot.mapsReduced; let midx = index">
+          <div class="left"
+          [ngClass]="{ dashed: !lot.mapsCheck(midx)}">
+            <input
+              type="checkbox"
+              name="cb-map-{{ map }}"
+              class="cb-map"
+              [checked]="lot.mapsCheck(midx)"
+              disabled="true"
+            />
+            {{ map }}
+          </div>
+          <div class="right">
+              <button class="btnm" (click)="lot.mapMinus(midx)">-</button>
+              <button class="btnp" (click)="lot.mapPlus(midx)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <textarea class="buy-message" id="buy-message-{{ idx }}" disabled="true">{{lot.buyMessage}}</textarea>
+    <button
+      [ngClass]="{ clicked: lot.clicked }"
+      class="copy-message-button"
+      (click)="lot.clicked = true"
+    >
+      Copy message
+    </button>
+  </div>
+</div>

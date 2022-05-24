@@ -1,27 +1,30 @@
 # BulkSearcher
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
+## Download
 
-## Development server
+[Download link win32x64](https://)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## About
 
-## Code scaffolding
+It's a tool for searching blighted maps.
+[Showcase](https://)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Build it
 
-## Build
+It sould't work in your browser.
+For correct run this app it's needed to build with angular and then build with electron.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Q&A
 
-## Running unit tests
+**Q:** It is legal?
+**A:** Yes. Your ip can get temporary block on trade site if you will parallel search something manually and by this app. Similar could happen when you using any trade macros and searching something on trade site. This does not threaten your account in any way.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Q:** What are the reasons to use it?
+**A:** With new exchange engine you have less reasos to use it. But you still can't filter maps by tiers on official trade site. With this tool you can.
 
-## Running end-to-end tests
+**Q:** Why the search takes too long?
+**A:** The more tier range you setup, the more time needed for searching.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## P.S. Note
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+I did't plan to publish this. I am aware of the problems in the project. Maybe I will fix them someday.

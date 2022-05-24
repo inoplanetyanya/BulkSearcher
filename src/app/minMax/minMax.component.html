@@ -1,0 +1,25 @@
+<div class="min-max-wrapper">
+  <p class="title">{{ title }}:</p>
+  <div class="inputs">
+    <input
+      class="input"
+      type="tel"
+      name="min"
+      id="min"
+      placeholder="Min"
+      [(ngModel)]="this.min"
+      (input)="onInputMin()"
+      maxlength="6"
+    />
+    <input
+      class="input"
+      type="tel"
+      name="max"
+      id="max"
+      placeholder="Max"
+      [(ngModel)]="this.max"
+      (input)="onInputMax()"
+      maxlength="6"
+    />
+  </div>
+</div>

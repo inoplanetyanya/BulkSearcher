@@ -1,0 +1,19 @@
+.search-placeholder-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 999999;
+}
+
+.text {
+  color: #ffffff;
+  font-size: 100px;
+}
