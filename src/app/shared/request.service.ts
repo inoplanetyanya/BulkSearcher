@@ -64,7 +64,7 @@ export class Lot {
 
   public set clicked(value: boolean) {
     this._clicked = value;
-  } 
+  }
 
   private findUniqMaps(): Map[] {
     let mapsUniq: Map[] = [];
@@ -195,18 +195,22 @@ export class Lot {
 
   private tmin: any;
   private tmax: any;
+  private ravaged: string;
 
   public get buyMessage(): string {
-    let ravaged =
-      this.optionService?.options.blightType === 'uberblighted'
-        ? '-Ravaged'
-        : '';
-    let tier = this.tmin === this.tmax ? `Tier ${this.tmin}` : `Tier ${this.tmin}-${this.tmax}`;
+    let tier =
+      this.tmin === this.tmax
+        ? `Tier ${this.tmin}`
+        : `Tier ${this.tmin}-${this.tmax}`;
     return `@${
       this._seller
-    } Hi, I would like to buy your non-corrupted and non-annoited ${tier} Blighted${ravaged} Maps: ${this.mapsReducedBuy.filter(el => el !== '').join(
-      '; '
-    )}. Total ${this.pickedCount} maps for ${this.pickedPrice} chaos`;
+    } Hi, I would like to buy your non-corrupted and non-annoited ${tier} Blighted${
+      this.ravaged
+    } Maps: ${this.mapsReducedBuy
+      .filter((el) => el !== '')
+      .join('; ')}. Total ${this.pickedCount} maps for ${
+      this.pickedPrice
+    } chaos`;
   }
 
   public get pricePerMap(): number {
@@ -219,6 +223,10 @@ export class Lot {
     this.tmax = this.optionService?.options.tierMax;
     if (!this.tmax) this.tmax = 16;
     if (this.tmax && !this.tmin) this.tmin = 13;
+    this.ravaged =
+      this.optionService?.options.blightType === 'uberblighted'
+        ? '-Ravaged'
+        : '';
   }
 }
 
@@ -262,7 +270,13 @@ export class Map {
     this._picked = !this._picked;
   }
 
-  constructor(seller: string, map: string, tier: number, price: number, sellerAcc: string) {
+  constructor(
+    seller: string,
+    map: string,
+    tier: number,
+    price: number,
+    sellerAcc: string
+  ) {
     this._seller = seller;
     this._map = map;
     this._tier = tier;
@@ -303,7 +317,6 @@ export class RequestService implements OnInit {
 
   public lastResult: any[] = [];
   // public lastResult: any[] = this.generateResult();
-
 
   processing: boolean = false;
 
@@ -592,5 +605,8 @@ export class RequestService implements OnInit {
 
   ngOnInit(): void {}
 
-  constructor(private optionsService: OptionsService, private leagueService: LeagueService) {}
+  constructor(
+    private optionsService: OptionsService,
+    private leagueService: LeagueService
+  ) {}
 }
