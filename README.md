@@ -2,21 +2,21 @@
 
 ## Download
 
-[Download link win32x64](https://github.com/inoplanetyanya/BulkSearcher/releases/download/v1.0.0/BulkSearcher_v1.0.0.exe)
+[Download portable for win 10](https://github.com/inoplanetyanya/BulkSearcher/releases/download/v1.0.0/BulkSearcher_v1.0.0.exe)
 
 ## About
 
 It's a tool for searching blighted maps.  
-[Showcase](https://)
+[Showcase](https://youtu.be/LPI1UwKjBME)
 
 ## Build it
 
-It sould't work in your browser.  
+It souldn't work in your browser.  
 For correct run this app it's needed to build with angular and then build with electron.
 
 ## Q&A
 
-**Q:** It is legal?  
+**Q:** Is it legal?  
 **A:** Yes. Your ip can get temporary block on trade site if you will parallel search something manually and by this app. Similar could happen when you using any trade macros and searching something on trade site. This does not threaten your account in any way.
 
 **Q:** What are the reasons to use it?  
